@@ -42,10 +42,10 @@ class SslWSmsServiceProvider extends ServiceProvider
      */
     protected function registerSslWSms()
     {
-        $this->app->singleton('sslwsms', function (Container $app) {
+        $this->app->bind('sms', function (Container $app) {
             return new Sms($app['config']->get('sslwsms'));
         });
-        $this->app->alias('sslwsms', Sms::class);
+        $this->app->alias('sms', Sms::class);
     }
     /**
      * Get the services provided by the provider.
@@ -55,7 +55,7 @@ class SslWSmsServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            Sms::class,
+            'sms'
         ];
     }
 }
