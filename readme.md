@@ -172,6 +172,6 @@ Here this messege will sent as every users with his name and promo code like:
 - `01570420420`  -    Hello Kaiser , Your promo code is: 1234
 - `01870420420`  -    Hello Eather , Your promo code is: 7642
 
-This it.
+Thats it.
 
 Thank you :)
