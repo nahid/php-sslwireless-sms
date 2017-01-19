@@ -95,3 +95,75 @@ if ($msg->parameter == 'ok' and $msg->login == 'success') {
     echo 'Messages Sent';
 }
 ```
+
+### Send SMS to more user
+
+```php
+$msg = $sms->message('0170420420', 'Hello Dear')
+        ->message('0160420420', 'Hello Dear Uncle')
+        ->message('0150420420', 'Hello Dear Trump')
+        ->send();
+
+if ($msg->parameter == 'ok' and $msg->login == 'success') {
+    echo 'Messages Sent';
+}
+```
+### Send SMS to users from Collections
+
+$users = [
+    ['01670420420', 'Hello Trump'],
+    ['01970420420', 'Hello Bush'],
+    ['01770420420', 'Hello Hilari'],
+    ['01570420420', 'Hello Obama'],
+    ['01870420420', 'Hello Hero Alom']
+]
+
+$msg = $sms->message($users)->send();
+
+if ($msg->parameter == 'ok' and $msg->login == 'success') {
+    echo 'Messages Sent';
+}
+```
+
+### Send same message to all users
+
+```php
+$users = [
+    ['01670420420'],
+    ['01970420420'],
+    ['01770420420'],
+    ['01570420420'],
+    ['01870420420']
+]
+
+$msg = $sms->message($users, 'Hello Everyone')->send();
+
+if ($msg->parameter == 'ok' and $msg->login == 'success') {
+    echo 'Messages Sent';
+}
+```
+
+
+### Send SMS with SMS template
+
+Suppose you have to send SMS to multiple users but you want to mentions their name dynamically with message. So what can you do? Ha ha this package already handle this situations. Lets see
+
+```php
+$users = [
+    ['01670420420', ['Nahid', '1234']],
+    ['01970420420', ['Obi', '3213']],
+    ['01770420420', ['Shipu', '5000']],
+    ['01570420420', ['Kaiser', '3214']],
+    ['01870420420', ['Eather', '7642']]
+]
+
+$msg = $sms->message($users, "Hello %s , Your promo code is: %s")->send();
+
+if ($msg->parameter == 'ok' and $msg->login == 'success') {
+    echo 'Messages Sent';
+}
+```
+
+This it.
+
+Thank you :)
