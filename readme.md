@@ -110,6 +110,7 @@ if ($msg->parameter == 'ok' and $msg->login == 'success') {
 ```
 ### Send SMS to users from Collections
 
+```php
 $users = [
     ['01670420420', 'Hello Trump'],
     ['01970420420', 'Hello Bush'],
