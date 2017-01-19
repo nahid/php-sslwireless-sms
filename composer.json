@@ -1,0 +1,27 @@
+{
+    "name": "nahid/php-sslwireless-sms",
+    "description": "PHP client for SSL Wireless SMS API",
+    "keywords": ["SSL Wireless", "php", "api", "sms", "php-ssl-sms"],
+    "type": "library",
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+
+    "license": "CC(1.0)",
+    "authors": [
+        {
+            "name": "Nahid Bin Azhar",
+            "email": "nahid.dns@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Nahid\\SslWSms\\": "src/"
+        },
+        "files": [
+        ]
+    },
+    "minimum-stability": "dev"
+}
