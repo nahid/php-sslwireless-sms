@@ -164,6 +164,14 @@ if ($msg->parameter == 'ok' and $msg->login == 'success') {
 }
 ```
 
+Here this messege will sent as every users with his name and promo code like:
+
+- `01670420420`  -    Hello Nahid , Your promo code is: 1234
+- `01970420420`  -    Hello Obi , Your promo code is: 3213
+- `01770420420`  -    Hello Shipu , Your promo code is: 5000
+- `01570420420`  -    Hello Kaiser , Your promo code is: 1234
+- `01870420420`  -    Hello Eather , Your promo code is: 7642
+
 This it.
 
 Thank you :)
