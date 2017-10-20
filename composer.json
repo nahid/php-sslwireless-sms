@@ -23,5 +23,15 @@
         "files": [
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nahid\\SslWSms\\SslWSmsServiceProvider"
+            ],
+            "aliases": {
+                "Sms": "Nahid\\SslWSms\\Facades\\Sms"
+            }
+        }
+    }
 }
