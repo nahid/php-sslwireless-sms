@@ -79,7 +79,7 @@ Its very easy to use. This packages has a lot of functionalities and features.
 $sms = new Sms($config);
 $msg = $sms->message('0170420420', 'Hello Dear')->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
@@ -91,7 +91,7 @@ use Nahid\SslWSms\Facades\Sms;
 
 $msg = Sms::message('0170420420', 'Hello Dear')->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
@@ -104,7 +104,7 @@ $msg = $sms->message('0170420420', 'Hello Dear')
         ->message('0150420420', 'Hello Dear Trump')
         ->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
@@ -121,7 +121,7 @@ $users = [
 
 $msg = $sms->message($users)->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
@@ -139,7 +139,7 @@ $users = [
 
 $msg = $sms->message($users, 'Hello Everyone')->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
@@ -160,7 +160,7 @@ $users = [
 
 $msg = $sms->message($users, "Hello %s , Your promo code is: %s")->send();
 
-if ($msg->parameter == 'ok' and $msg->login == 'success') {
+if ($msg->parameter == 'ok' and $msg->login == 'successfull') {
     echo 'Messages Sent';
 }
 ```
