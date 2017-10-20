@@ -30,7 +30,7 @@
                 "Nahid\\SslWSms\\SslWSmsServiceProvider"
             ],
             "aliases": {
-                'Sms': "Nahid\\SslWSms\\Facades\\Sms"
+                "Sms": "Nahid\\SslWSms\\Facades\\Sms"
             }
         }
     }
