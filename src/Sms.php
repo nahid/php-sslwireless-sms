@@ -55,7 +55,7 @@ class Sms extends AbstractApi
     {
         $sms = [];
         foreach ($to as $user) {
-            $template = isset($user[1]) & is_array($user[1]) ? $user[1] : [];
+            $template = isset($user[1]) && is_array($user[1]) ? $user[1] : [];
             $sms[] = [$user[0], vsprintf($message, $template), uniqid()];
         }
 
