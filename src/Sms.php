@@ -11,7 +11,7 @@ class Sms extends AbstractApi
     public function __construct($config)
     {
         $this->config = $config;
-        parent::__construct();
+        parent::__construct($config);
     }
 
     public function message($to, $message = null)

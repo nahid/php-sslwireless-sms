@@ -21,9 +21,9 @@ abstract class AbstractApi
         'PATCH',
     ];
 
-    public function __construct()
+    public function __construct($config = [])
     {
-        $this->client = new RequestHandler();
+        $this->client = new RequestHandler(isset($config['url']) ? $config['url'] : null);
     }
 
     public function __call($func, $params)
@@ -75,8 +75,6 @@ abstract class AbstractApi
     {
         $this->parameters['timeout'] = 60;
 
-        $response = new Response($this->client->http->request($method, $uri, $this->parameters));
-
-        return $response->data;
+        return new Response($this->client->http->request($method, $uri, $this->parameters));
     }
 }

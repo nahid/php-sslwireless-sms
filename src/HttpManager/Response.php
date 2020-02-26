@@ -5,12 +5,10 @@ namespace Nahid\SslWSms\HttpManager;
 class Response
 {
     protected $response;
-    public $data = [];
 
     public function __construct($response)
     {
         $this->response = $response;
-        $this->data = $this->getData();
     }
 
     public function __call($method, $args)

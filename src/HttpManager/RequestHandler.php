@@ -10,8 +10,9 @@ class RequestHandler
 
     public $http;
 
-    public function __construct()
+    public function __construct($baseUrl = null)
     {
-        $this->http = new Client(['base_uri' => self::BASE_URL, 'timeout' => 2.0]);
+        $baseUrl = $baseUrl ? $baseUrl : self::BASE_URL;
+        $this->http = new Client(['base_uri' => $baseUrl, 'timeout' => 2.0]);
     }
 }
