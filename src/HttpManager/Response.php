@@ -20,7 +20,7 @@ class Response
         return false;
     }
 
-    protected function getData()
+    public function getData()
     {
         $header = explode(';', $this->response->getHeader('Content-Type')[0]);
         $contentType = $header[0];
@@ -36,6 +36,6 @@ class Response
             return $xmlData;
         }
 
-        return false;
+        return null;
     }
 }
